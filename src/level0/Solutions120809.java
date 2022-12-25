@@ -10,12 +10,15 @@ import java.util.Arrays;
 public class Solutions120809 {
 
     public static void main(String[] args) {
-        System.out.println( "1 : " + Arrays.toString(solution(new int[]{1, 2, 3, 4, 5}))) ;
-        System.out.println( "2 : " + Arrays.toString(solution( new int[] {1, 2, 100, -99, 1, 2, 3})) );
+        System.out.println( "1 : " + Arrays.toString(solution(new int[] { 1, 2, 3, 4, 5 }))) ;
+        System.out.println( "2 : " + Arrays.toString(solution( new int[] { 1, 2, 100, -99, 1, 2, 3})) );
+
     }
 
     public static int [] solution( int[] numbers){
-        return Arrays.stream(numbers).sequential().map( e-> e*2).toArray();
+        Arrays.stream(numbers).sequential();
+        return Arrays.stream(numbers).map(e->e*2).toArray();
+//        return Arrays.stream(numbers).sequential().map( e-> e*2).toArray();
     }
 
 }
