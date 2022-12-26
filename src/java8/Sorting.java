@@ -15,10 +15,6 @@ public class Sorting {
                 .boxed()
                 .collect(Collectors.toList()) );
 
-//        System.out.println( "IntStream 정렬 : " + IntStream.of(14,11,20,39,23)
-//                .sorted()
-//                .collect(Collectors.toList()) );
-//
         var numbers = List.of(5, 2, 3, 9, 4);
 
         System.out.println( "numbers : " + numbers.stream()
@@ -30,6 +26,16 @@ public class Sorting {
         System.out.println( "reverseNumbers : "+ reverseNumbers.stream()
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList()) );
+
+        System.out.println( "Max : " + IntStream.of(14,11,20,39,23 ).max() );
+        System.out.println( "Min : " + IntStream.of(14,11,20,39,23 ).min() );
+        System.out.println( "Average : " + IntStream.of(14,11,20,39,23 ).average() );
+
+        final var strings = List.of("banana", "orange", "apple");
+        final var expected = List.of("orange", "banana", "apple");
+
+//        System.out.println( "spliterator() : " + strings.stream().spliterator(). );
+
 
     }
 
