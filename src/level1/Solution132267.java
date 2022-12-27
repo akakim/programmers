@@ -21,7 +21,6 @@ public class Solution132267 {
     // b < a < n 이 기본전제임.
     public static int solution(int a, int b, int n) {
         int answer = 0;
-
         // 상식적으로 내가 산 콜라(n) 갯수보다 교환해주는 숫자 a 가 높으면 0병을 나는 마실 수 있다.
         if ( n < a ) {
             return 0;
@@ -31,13 +30,13 @@ public class Solution132267 {
 
         while ( a <= accumlateN ){
 
-            int drinkCola = accumlateN / a  *  b ;
-            int numberOfBottle = accumlateN / a ;
+            int drinkColor = (accumlateN / a)  *  b ;
+            int restOfColor = accumlateN%a;
 
-            numberOfBottle += accumlateN % a;
 
-            answer += drinkCola;
-            accumlateN = numberOfBottle;
+            answer += drinkColor ;
+            accumlateN = drinkColor + restOfColor;
+
         }
 
         return answer;
