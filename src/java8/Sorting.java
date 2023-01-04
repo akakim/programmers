@@ -1,5 +1,6 @@
 package java8;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,6 +15,15 @@ public class Sorting {
                 .sorted()
                 .boxed()
                 .collect(Collectors.toList()) );
+
+        List<Integer> testList = List.of( 14,11,20,39,23 );
+
+        int [] sss = { 14,11,20,39,23};
+        System.out.println( "Sort : " + IntStream.of( sss ).sorted().boxed().collect(Collectors.toList()).get(sss.length/2));
+
+
+        System.out.println( "Sort : " + IntStream.of( sss ).sorted().boxed().collect(Collectors.toList()).get(sss.length/2));
+
 
         var numbers = List.of(5, 2, 3, 9, 4);
 
